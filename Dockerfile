@@ -1,7 +1,7 @@
 FROM php:8.3-fpm-alpine
 
 # Install system dependencies and PHP extensions
-RUN apk add --no-cache \
+RUN apk update && apk add --no-cache \
     curl \
     git \
     libpng-dev \
@@ -13,13 +13,26 @@ RUN apk add --no-cache \
     zip \
     unzip \
     libzip-dev \
-  && docker-php-ext-configure gd \
+    icu-dev \
+    libxml2-dev \
+    libsodium-dev \
+    && docker-php-ext-configure gd \
         --with-freetype \
         --with-jpeg \
         --with-webp \
         --with-xpm \
-  && docker-php-ext-install zip pdo_mysql  gd \
-  && rm -rf /var/cache/apk/*
+    && docker-php-ext-install \
+        zip \
+        pdo_mysql \
+        gd \
+        intl \
+        mbstring \
+        xml \
+        exif \
+        sodium \
+        bcmath \
+    && docker-php-ext-enable intl \
+    && rm -rf /var/cache/apk/*
 
 # Install Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
