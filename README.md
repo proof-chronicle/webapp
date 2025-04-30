@@ -1,61 +1,60 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://devdojo.com/wave" target="_blank"><img src="https://cdn.devdojo.com/images/october2024/wave-logo.png" width="200"></a></p>
 
 <p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<a href="https://github.com/thedevdojo/wave/actions"><img src="https://github.com/thedevdojo/wave/actions/workflows/tests.yml/badge.svg" alt="Build Status"></a>
+<a href="https://github.com/thedevdojo/wave"><img src="https://img.shields.io/github/v/release/thedevdojo/wave" alt="Latest Stable Version"></a>
+<a href="https://github.com/thedevdojo/wave"><img src="https://img.shields.io/badge/license-MIT-green" alt="License"></a>
+<a href="https://herd.laravel.com/new?starter-kit=devdojo/wave"><img src="https://img.shields.io/badge/Install%20with%20Herd-f55247?logo=laravel&logoColor=white"></a>
 </p>
 
-## About Laravel
+Wave is a SaaS framework, built with <a href="https://laravel.com">Laravel</a>, that will make building your SaaS application fun and easier than ever before. <a href="https://devdojo.com/wave/docs" target="_blank">View the full docs here</a>.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Wave provides you with all the essential features found in many popular SaaS platforms, allowing you to quickly transform your idea into a profitable SaaS product. Here are a handful of features that Wave Provides:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+ - <a href="https://devdojo.com/wave/docs/features/auth" target="_blank">Authentication</a>
+ - <a href="https://devdojo.com/wave/docs/features/user-profiles" target="_blank">User Profiles</a>
+ - <a href="https://devdojo.com/wave/docs/features/user-impersonations" target="_blank">User Impersonations</a>
+ - <a href="https://devdojo.com/wave/docs/features/billing" target="_blank">Billing</a>
+ - <a href="https://devdojo.com/wave/docs/features/subscription-plans" target="_blank">Subscription Plans</a>
+ - <a href="https://devdojo.com/wave/docs/features/roles-permissions" target="_blank">Roles & Permissions</a>
+ - <a href="https://devdojo.com/wave/docs/features/notifications" target="_blank">User Notifications</a>
+ - <a href="https://devdojo.com/wave/docs/features/changelog" target="_blank">Changelog</a>
+ - <a href="https://devdojo.com/wave/docs/features/blog" target="_blank">Blog</a>
+ - <a href="https://devdojo.com/wave/docs/features/pages" target="_blank">Pages</a>
+ - <a href="https://devdojo.com/wave/docs/features/api" target="_blank">API</a>
+ - <a href="https://devdojo.com/wave/docs/features/admin" target="_blank">Admin</a>
+ - <a href="https://devdojo.com/wave/docs/features/themes" target="_blank">Themes</a>
+ - <a href="https://devdojo.com/wave/docs/features/plugins" target="_blank">Plugins</a>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Be sure to view a list of <a href="https://devdojo.com/wave/docs/features/auth" target="_blank">all features here</a>.
 
-## Learning Laravel
+## Demo
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+You can view a <a href="https://devdojo.com/wave/demo" target="_blank">live demo here</a>, which will also allow you to preview all the <a href="https://devdojo.com/wave/themes" target="_blank">available themes</a>.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+<a href="https://devdojo.com/wave/demo" target="_blank"><img src="https://cdn.devdojo.com/images/august2024/wave-anchor-theme.jpeg"></a>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Installation
 
-## Laravel Sponsors
+There are two ways to install Wave, you can install it via the automated installer or manually.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+Click here to <a href="https://devdojo.com/wave/docs/install" target="_blank">view the full installation instructions</a>.
 
-### Premium Partners
+## Support the Project
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development/)**
-- **[Active Logic](https://activelogic.com)**
+The best way to support this project is to support us by subscribing to a <a href="https://devdojo.com/pro">DevDojo Pro</a> account. This will give you access to <a href="https://devdojo.com/wave/pro">premium content</a> to help you build your SaaS even quicker. Also, make sure to tell your friends and <a href="https://github.com/thedevdojo/wave/compare" target="_blank">submit a PR</a> if you want to contribute.
 
-## Contributing
+We've also got a full video series on how you can setup, build, and configure Wave. 🍿 You can watch first few videos for free, and additional videos will require a [DevDojo Pro](https://devdojo.com/wave/pro) subscription. By subscribing to a [DevDojo Pro](https://devdojo.com/pro) subscription you will also be supporting the ongoing development of this project. It's a win win! 🙌
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+[Click here to watch the Wave Video Course](https://devdojo.com/wave/videos).
 
-## Code of Conduct
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Documentation
 
-## Security Vulnerabilities
+Checkout the [official documentation here](https://devdojo.com/wave/docs).
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## Sponsors
 
-## License
+Wave is proudly supported by our amazing sponsors. A big thank you to:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+[![DigitalOcean Referral Badge](https://web-platforms.sfo2.cdn.digitaloceanspaces.com/WWW/Badge%203.svg)](https://www.digitalocean.com/?refcode=dc19b9819d06&utm_campaign=Referral_Invite&utm_medium=Referral_Program&utm_source=badge)
