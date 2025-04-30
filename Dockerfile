@@ -24,6 +24,7 @@ RUN apk add --no-cache \
         pdo_mysql \
         gd \
         intl \
+        exif \
   && rm -rf /var/cache/apk/*
 
 # Install Composer

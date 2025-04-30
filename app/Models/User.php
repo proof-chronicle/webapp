@@ -2,47 +2,69 @@
 
 namespace App\Models;
 
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Support\Str;
+use Wave\User as WaveUser;
 use Illuminate\Notifications\Notifiable;
+use Wave\Traits\HasProfileKeyValues;
 
-class User extends Authenticatable
+class User extends WaveUser
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasFactory, Notifiable;
+    use Notifiable, HasProfileKeyValues;
+
+    public $guard_name = 'web';
 
     /**
      * The attributes that are mass assignable.
      *
-     * @var list<string>
+     * @var array<int, string>
      */
     protected $fillable = [
         'name',
         'email',
+        'username',
+        'avatar',
         'password',
+        'role_id',
+        'verification_code',
+        'verified',
+        'trial_ends_at',
     ];
 
     /**
      * The attributes that should be hidden for serialization.
      *
-     * @var list<string>
+     * @var array<int, string>
      */
     protected $hidden = [
         'password',
         'remember_token',
     ];
 
-    /**
-     * Get the attributes that should be cast.
-     *
-     * @return array<string, string>
-     */
-    protected function casts(): array
+    protected static function boot()
     {
-        return [
-            'email_verified_at' => 'datetime',
-            'password' => 'hashed',
-        ];
+        parent::boot();
+        
+        // Listen for the creating event of the model
+        static::creating(function ($user) {
+            // Check if the username attribute is empty
+            if (empty($user->username)) {
+                // Use the name to generate a slugified username
+                $username = Str::slug($user->name, '');
+                $i = 1;
+                while (self::where('username', $username)->exists()) {
+                    $username = Str::slug($user->name, '') . $i;
+                    $i++;
+                }
+                $user->username = $username;
+            }
+        });
+
+        // Listen for the created event of the model
+        static::created(function ($user) {
+            // Remove all roles
+            $user->syncRoles([]);
+            // Assign the default role
+            $user->assignRole( config('wave.default_user_role', 'registered') );
+        });
     }
 }

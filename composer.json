@@ -1,30 +1,51 @@
 {
-    "$schema": "https://getcomposer.org/schema.json",
-    "name": "laravel/laravel",
-    "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
-    "keywords": ["laravel", "framework"],
+    "name": "devdojo/wave",
+    "description": "Wave SaaS Starter Kit",
+    "keywords": ["framework", "laravel", "SaaS", "Starter Kit"],
     "license": "MIT",
+    "type": "project",
     "require": {
-        "php": "^8.2",
+        "php": "^8.1",
+        "ext-exif": "*",
+        "ext-gd": "*",
+        "bezhansalleh/filament-google-analytics": "^2.0",
+        "codeat3/blade-phosphor-icons": "^2.0",
+        "devdojo/app": "0.11.0",
+        "devdojo/auth": "^1.0",
+        "devdojo/themes": "0.0.11",
         "filament/filament": "^3.2",
-        "laravel/framework": "^12.0",
-        "laravel/tinker": "^2.10.1"
+        "gehrisandro/tailwind-merge-laravel": "^1.2",
+        "guzzlehttp/guzzle": "^7.2",
+        "intervention/image": "^2.7",
+        "lab404/laravel-impersonate": "^1.7.5",
+        "laravel/folio": "^1.1",
+        "laravel/framework": "^11.0",
+        "laravel/pail": "^1.2",
+        "laravel/tinker": "^2.7",
+        "laravel/ui": "^4.5",
+        "livewire/livewire": "^3.0",
+        "ralphjsmit/livewire-urls": "^1.4",
+        "spatie/laravel-permission": "^6.4",
+        "stripe/stripe-php": "^15.3",
+        "tymon/jwt-auth": "@dev"
     },
     "require-dev": {
-        "fakerphp/faker": "^1.23",
-        "laravel/pail": "^1.2.2",
-        "laravel/pint": "^1.13",
-        "laravel/sail": "^1.41",
-        "mockery/mockery": "^1.6",
-        "nunomaduro/collision": "^8.6",
-        "phpunit/phpunit": "^11.5.3"
+        "alebatistella/duskapiconf": "^1.2",
+        "fakerphp/faker": "^1.9.1",
+        "laravel/dusk": "^8.0",
+        "mockery/mockery": "^1.4.4",
+        "nunomaduro/collision": "6.4.0|^7.0|^8.1",
+        "pestphp/pest": "^3.4",
+        "pestphp/pest-plugin-laravel": "^3.0",
+        "phpunit/phpunit": "^11.0",
+        "spatie/laravel-ignition": "^2.0"
     },
     "autoload": {
         "psr-4": {
             "App\\": "app/",
             "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "Database\\Seeders\\": "database/seeders/",
+            "Wave\\": "wave/src/"
         }
     },
     "autoload-dev": {
@@ -32,46 +53,44 @@
             "Tests\\": "tests/"
         }
     },
+    "extra": {
+        "laravel": {
+            "dont-discover": [],
+            "providers": [
+                "Wave\\WaveServiceProvider"
+            ]
+        }
+    },
     "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi",
-            "@php artisan filament:upgrade"
-        ],
-        "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
-        ],
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
             "@php artisan key:generate --ansi",
             "@php -r \"file_exists('database/database.sqlite') || touch('database/database.sqlite');\"",
-            "@php artisan migrate --graceful --ansi"
+            "@php artisan migrate --graceful --ansi",
+            "@php artisan db:seed",
+            "@php artisan livewire:publish --assets"
+        ],
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover",
+            "@php artisan storage:link",
+            "@php artisan filament:upgrade"
         ],
         "dev": [
             "Composer\\Config::disableProcessTimeout",
             "npx concurrently -c \"#93c5fd,#c4b5fd,#fb7185,#fdba74\" \"php artisan serve\" \"php artisan queue:listen --tries=1\" \"php artisan pail --timeout=0\" \"npm run dev\" --names=server,queue,logs,vite"
-        ],
-        "test": [
-            "@php artisan config:clear --ansi",
-            "@php artisan test"
         ]
     },
-    "extra": {
-        "laravel": {
-            "dont-discover": []
-        }
-    },
     "config": {
-        "optimize-autoloader": true,
         "preferred-install": "dist",
         "sort-packages": true,
+        "optimize-autoloader": true,
         "allow-plugins": {
-            "pestphp/pest-plugin": true,
-            "php-http/discovery": true
+            "pestphp/pest-plugin": true
         }
     },
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "prefer-stable": true
 }
