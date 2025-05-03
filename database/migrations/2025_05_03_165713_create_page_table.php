@@ -11,8 +11,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('page', function (Blueprint $table) {
+        Schema::create('indexed_pages', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('site_id');
             $table->string('title');
             $table->string('url');
             $table->string('content_selector')->nullable();
@@ -27,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('page');
+        Schema::dropIfExists('indexed_pages');
     }
 };

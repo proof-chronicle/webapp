@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('screen_shot')->nullable();
             $table->timestamps(0);
 
-            $table->foreign('page_id')->references('id')->on('page')->onDelete('cascade');
+            $table->foreign('page_id')->references('id')->on('indexed_pages')->onDelete('cascade');
         });
     }
 
