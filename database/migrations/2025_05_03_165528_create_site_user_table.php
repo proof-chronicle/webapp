@@ -17,6 +17,9 @@ return new class extends Migration
             $table->integer('site_id');
             $table->enum('role', ['owner', 'user']);
             $table->timestamps();
+
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('site_id')->references('id')->on('sites')->onDelete('cascade');
         });
     }
     /**

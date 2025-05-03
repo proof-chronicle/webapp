@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('url');
             $table->string('content_selector')->nullable();
             $table->timestamps(0);  // Для точності
+            
+            $table->foreign('site_id')->references('id')->on('sites')->onDelete('cascade');
         });
     }
 
