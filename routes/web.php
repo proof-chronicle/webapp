@@ -16,3 +16,9 @@ use Wave\Facades\Wave;
 
 // Wave routes
 Wave::routes();
+
+Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
+    Route::get('sites', [SiteController::class, 'index'])->name('sites');
+    Route::get('sites/create', [SiteController::class, 'create'])->name('sites.create');
+    Route::post('sites', [SiteController::class, 'store'])->name('sites.store');
+});
