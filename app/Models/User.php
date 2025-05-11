@@ -70,6 +70,6 @@ class User extends WaveUser
 
     public function sites()
     {
-        return $this->hasMany(Site::class);
+        return $this->belongsToMany(Site::class, 'site_user');
     }
 }
