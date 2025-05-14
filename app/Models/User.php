@@ -67,4 +67,9 @@ class User extends WaveUser
             $user->assignRole( config('wave.default_user_role', 'registered') );
         });
     }
+
+    public function sites()
+    {
+        return $this->belongsToMany(Site::class, 'site_user');
+    }
 }
