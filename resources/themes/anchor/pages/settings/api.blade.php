@@ -88,14 +88,15 @@
                                 ->maxLength(255),
                             // ...
                         ]),
-                    DeleteAction::make(),
+                    DeleteAction::make()->hidden(fn (Wave\ApiKey $record): bool => $record->user()->exists()),
+                    
             ]);
         }
 
         public function refreshKeys(){
             $this->keys = auth()->user()->apiKeys;
+            
         }
-
 
 	}
 
