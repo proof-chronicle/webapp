@@ -97,11 +97,6 @@
             $this->keys = auth()->user()->apiKeys;
             
         }
-public function sites()
-{
-    return $this->belongsTo(form::class); // або belongsToMany, залежно від зв'язку
-}
-
 
 	}
 
