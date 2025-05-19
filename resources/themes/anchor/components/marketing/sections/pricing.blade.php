@@ -2,7 +2,7 @@
     <x-marketing.elements.heading
         level="h2"
         title="Chart Your Course"
-        description="Set sail and discover the riches of our value-packed plans, meticulously designed to offer you the very best features for less on your SaaS expedition. " 
+        description="Embark on your journey with ProofChronicle — select a plan crafted to unlock new horizons of transparency and trust. Whether you're an independent creator or a large editorial team, our pricing tiers are built to meet your needs." 
     />
 
     <div x-data="{ on: false, billing: '{{ get_default_billing_cycle() }}',

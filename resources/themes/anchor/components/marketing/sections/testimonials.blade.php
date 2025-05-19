@@ -1,19 +1,19 @@
 <section class="w-full">
-    <x-marketing.elements.heading level="h2" title="Oceans of Approval" description="Find out why users are on board with Wave, through their own words and success tales." />
+    <x-marketing.elements.heading level="h2" title="Oceans of Trust" description="See how publishers and readers are embracing ProofChronicle to fight misinformation and build lasting credibility." />
     <ul role="list" class="grid grid-cols-1 gap-12 py-12 mx-auto max-w-2xl lg:max-w-none lg:grid-cols-3">
         <li>
             <figure class="flex flex-col justify-between h-full">
                 <blockquote class="">
                     <p class="text-sm sm:text-base font-medium text-zinc-500">
-                        Wave's ready-to-use features sped up our launch significantly. Its authentication and subscription tools are particularly impressive and user-friendly.
+                       “ProofChronicle changed the way we approach article trust. Now, every edit is accountable, and our readers feel more secure.”
                     </p>
                 </blockquote>
                 <figcaption class="flex flex-col justify-between mt-6">
                     <img alt="#_" src="https://cdn.devdojo.com/images/june2024/adam.jpeg" class="object-cover rounded-full grayscale size-14">
                     <div class="mt-4">
-                        <div class="font-medium text-zinc-900">Adam Wathan</div>
+                        <div class="font-medium text-zinc-900">Taras Petrik</div>
                         <div class="mt-1 text-sm text-zinc-500">
-                            Creator of Tailwind CSS
+                            Editor-in-Chief, Ukraine News Weekly
                         </div>
                     </div>
                 </figcaption>
@@ -23,15 +23,15 @@
             <figure class="flex flex-col justify-between h-full">
                 <blockquote class="">
                     <p class="text-sm sm:text-base font-medium text-zinc-500">
-                        Wave transformed our development workflow with its excellent API and profile management, saving us valuable time.
+                       “Integrating ProofChronicle was seamless, and it helped us win the trust of our audience by being fully transparent.”
                     </p>
                 </blockquote>
                 <figcaption class="flex flex-col justify-between mt-6">
                     <img alt="#_" src="https://cdn.devdojo.com/images/june2024/caleb.jpeg" class="object-cover rounded-full grayscale size-14">
                     <div class="mt-4">
-                        <div class="font-medium text-zinc-900">Caleb Porzio</div>
+                        <div class="font-medium text-zinc-900">Mark Bennett</div>
                         <div class="mt-1 text-sm text-zinc-500">
-                            Creator of Livewire & Alpine
+                           CTO, EuroFact
                         </div>
                     </div>
                 </figcaption>
@@ -41,15 +41,15 @@
             <figure class="flex flex-col justify-between h-full">
                 <blockquote class="">
                     <p class="text-sm sm:text-base font-medium text-zinc-500">
-                        Wave is an amazing SaaS Starter kit. The team here are Laravel leverages Wave all the time for many projects.
+                       “Finally, a tool that shows readers they can believe what they read. Essential for today’s information landscape.”
                     </p>
                 </blockquote>
                 <figcaption class="flex flex-col justify-between mt-6">
                     <img alt="#_" src="https://cdn.devdojo.com/images/june2024/taylor.jpeg" class="object-cover rounded-full grayscale size-14">
                     <div class="mt-4">
-                        <div class="font-medium text-zinc-900">Taylor Otwell</div>
+                        <div class="font-medium text-zinc-900">Taylor Derden</div>
                         <div class="mt-1 text-sm text-zinc-500">
-                            Founder and Creator of Laravel
+                            Founder, TruthNow Media
                         </div>
                     </div>
                 </figcaption>
