@@ -12,12 +12,12 @@ class SiteController extends Controller
     public function index()
     {
         $sites = auth()->user()->sites;
-        return view('admin.sites.index', compact('sites'));
+        return view('theme::pages.admin.sites.index', compact('sites'));
     }
 
     public function create()
     {
-        return view('admin.sites.create');
+        return view('theme::pages.admin.sites.create');
     }
 
     public function store(Request $request)
